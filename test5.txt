@@ -1,0 +1,45 @@
+// testowanie petli while
+
+niech kurtyna się podniesie
+
+Oświadczam powołanie do życia bytu o imieniu index który od pierwszego tchnienia niesie wartość 0;
+
+Dopóki los pozwala(index nie_przewyższa 10) {
+
+    Wybaczcie śmiałość lecz rozważam czy przypadkiem (index jest 10) {
+          oznajmij("index jest rowny 10, wychodzimy z petli");
+        } Jeżeli nie to zaiste uczynię co innego {
+            oznajmij("aktualny index to:");
+            oznajmij(index);
+        }
+
+    Niech byt index zostanie obdarzony wartością index + 1;
+}
+
+Oświadczam powołanie do życia bytu o imieniu index1 który od pierwszego tchnienia niesie wartość 100;
+Oświadczam powołanie do życia bytu o imieniu index2 który od pierwszego tchnienia niesie wartość 0;
+
+Dopóki los pozwala(index1 nie_ustępuje 10) {
+
+    Niech byt index2 zostanie obdarzony wartością 0;
+
+    Dopóki los pozwala(index2 nie_przewyższa 50) {
+        oznajmij("index2 jest rowny:");
+        oznajmij(index2);
+
+        Niech byt index2 zostanie obdarzony wartością index2 + 1;
+    }
+
+    oznajmij("koniec wewnetrznej petli, index1 jest rowny:");
+    oznajmij(index1);
+
+    Niech byt index1 zostanie obdarzony wartością index1 - 1;
+}
+
+/*
+Dopóki los pozwala(10 jest 10) {
+    oznajmij("pętla nieskonczona");
+}
+*/
+
+niech kurtyna opadnie

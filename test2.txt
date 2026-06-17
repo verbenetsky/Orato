@@ -1,0 +1,13 @@
+// deklaracja bez wartości + przypisanie
+
+Niech kurtyna się podniesie
+
+Oświadczam powołanie do życia bytu o imieniu x123 który od pierwszego tchnienia niesie wartość 5 jest 5;
+Oświadczam powołanie do życia bytu o imieniu y;
+
+Niech byt y zostanie obdarzony wartością x123;
+
+oznajmij(y);
+
+
+Niech kurtyna opadnie

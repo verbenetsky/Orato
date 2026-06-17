@@ -1,0 +1,49 @@
+Niech kurtyna się podniesie
+
+// test if / else if / else
+
+Oświadczam powołanie do życia bytu o imieniu x który od pierwszego tchnienia niesie wartość 10;
+Oświadczam powołanie do życia bytu o imieniu y który od pierwszego tchnienia niesie wartość 20;
+
+// powinno wejść do pierwszego if
+Wybaczcie śmiałość lecz rozważam czy przypadkiem (x jest 10) {
+    oznajmij("x jest równe 10");
+} Lecz jeśli los zechce (y jest 10) {
+    oznajmij("y jest równe 10");
+} Jeżeli nie to zaiste uczynię co innego {
+    oznajmij("żaden warunek nie był prawdziwy");
+}
+
+// powinno wejść do else if
+Wybaczcie śmiałość lecz rozważam czy przypadkiem (x jest 5) {
+    oznajmij("x jest równe 5");
+} lecz jeśli los zechce (y jest 20) {
+    oznajmij("y jest równe 20");
+} Jeżeli nie to zaiste uczynię co innego {
+    oznajmij("żaden warunek nie był prawdziwy");
+}
+
+// powinno wejść do else
+Wybaczcie śmiałość lecz rozważam czy przypadkiem (x jest 5) {
+    oznajmij("x jest równe 5");
+} lecz jeśli los zechce (y jest 10) {
+    oznajmij("y jest równe 10");
+} Jeżeli nie to zaiste uczynię co innego {
+    oznajmij("żaden warunek nie był prawdziwy");
+}
+
+// test z ORAZ
+Wybaczcie śmiałość lecz rozważam czy przypadkiem (x jest 10 oraz y jest 20) {
+    oznajmij("x jest 10 oraz y jest 20");
+} Jeżeli nie to zaiste uczynię co innego {
+    oznajmij("warunek ORAZ nie przeszedł");
+}
+
+// test z ALBO
+Wybaczcie śmiałość lecz rozważam czy przypadkiem (x jest 5 albo y jest 20) {
+    oznajmij("x jest 5 albo y jest 20");
+} Jeżeli nie to zaiste uczynię co innego {
+    oznajmij("warunek ALBO nie przeszedł");
+}
+
+Niech kurtyna opadnie

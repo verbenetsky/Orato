@@ -1,0 +1,9 @@
+
+//start, koniec, deklaracja, print
+Niech kurtyna się podniesie
+
+        Oświadczam powołanie do życia bytu o imieniu x który od pierwszego tchnienia niesie wartość 10;
+
+        oznajmij(x);
+
+Niech kurtyna opadnie

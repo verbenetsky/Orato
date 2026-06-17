@@ -1,0 +1,41 @@
+niech kurtyna się podniesie
+
+// test wczytywania liczby
+
+Oświadczam powołanie do życia bytu o imieniu liczba który od pierwszego tchnienia niesie wartość 0;
+
+oznajmij("Podaj liczbe:");
+Niech byt liczba przyjmie dar z ust użytkownika;
+
+oznajmij("Wczytana liczba to:");
+oznajmij(liczba);
+
+oznajmij("Liczba + 10 to:");
+oznajmij(liczba + 10);
+
+
+// test wczytywania tekstu
+
+Oświadczam powołanie do życia bytu o imieniu imie który od pierwszego tchnienia niesie wartość "";
+
+oznajmij("Podaj imie:");
+Niech byt imie przyjmie dar z ust użytkownika;
+
+oznajmij("Wczytane imie to:");
+oznajmij(imie);
+
+
+// test wczytywania i użycia w if
+
+Oświadczam powołanie do życia bytu o imieniu wiek który od pierwszego tchnienia niesie wartość 0;
+
+oznajmij("Podaj wiek:");
+Niech byt wiek przyjmie dar z ust użytkownika;
+
+Wybaczcie śmiałość lecz rozważam czy przypadkiem (wiek nie_ustępuje 18) {
+    oznajmij("Jestes pelnoletni");
+} Jeżeli nie to zaiste uczynię co innego {
+    oznajmij("Nie jestes pelnoletni");
+}
+
+niech kurtyna opadnie

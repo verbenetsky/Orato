@@ -1,0 +1,110 @@
+niech kurtyna się podniesie
+
+oznajmij(10 + 2 * 3 jest 16 oraz 5 ustępuje 9);
+
+/*
+1. NumberExpr(10)
+
+2. BinaryExpr(
+                   left = NumberExpr(10),
+                   operator = +,
+                   right = factor(), -> czyli znowu schodzenie w dol az do primary() po drodze sprawdzajac czy nie
+                   ma czegos z wiekszym priorytetem niz +
+                   line = operator.line
+               )
+
+3. NumberExpr(2)
+
+4. BinaryExpr(
+                   left = 2,
+                   operator = *,
+                   right = unary(), -> tutaj znowu schodzimy do primary i zwracane jest NumberExpr(3)
+                   line = operator.line
+               )
+
+5. BinaryExpr(
+                   left = 2,
+                   operator = *,
+                   right = NumberExpr(3)
+                   line = operator.line
+               )
+
+6. BinaryExpr(
+                      left = NumberExpr(10),
+                      operator = +,
+                      right = BinaryExpr(
+                                  left = NumberExpr(2),
+                                  operator = STAR,
+                                  right = NumberExpr(3),
+                                  line = operator.line
+                              )
+                      line = operator.line
+                  )
+
+7. BinaryExpr(
+                   left = tutaj sie znajduje caly krok nr 6,
+                   operator = jest,
+                   right = term(), -> schodzimy w dol az to primary, jest zwracane NumberExpr(16)
+                   line = operator.line
+               )
+
+8. BinaryExpr(
+                      left = tutaj sie znajduje caly krok nr 6,
+                      operator = jest,
+                      right = NumberExpr(16)
+                      line = operator.line
+                  )
+
+9. BinaryExpr(
+                   left = caly krok 8,
+                   operator = ORAZ,
+                   right = comparison(), -> schodzimy w dol az do primary(), jest zwracane NumberExpr(5), ale po drodze
+                   wracajac do logic() (tam gdzie bylo wywolane comparison()) napotykamy TokenType.USTĘPUJE
+                   line = operator.line
+               )
+
+10. BinaryExpr(
+                       left = caly krok 8,
+                       operator = ORAZ,
+                       right = BinaryExpr(
+                                               left = NumberExpr(5),
+                                               operator = USTEPUJE,
+                                               right = NumberExpr(9),
+                                               line = operator.line
+                                           ),
+                       line = operator.line
+                   )
+
+11. czyli ostatecznie cos takiego:
+
+BinaryExpr(
+                       left = BinaryExpr(
+                                                    left = BinaryExpr(
+                                                                                 left = NumberExpr(10),
+                                                                                 operator = +,
+                                                                                 right = BinaryExpr(
+                                                                                             left = NumberExpr(2),
+                                                                                             operator = STAR,
+                                                                                             right = NumberExpr(3),
+                                                                                             line = operator.line
+                                                                                         )
+                                                                                 line = operator.line
+                                                                             ),
+                                                    operator = jest,
+                                                    right = NumberExpr(16)
+                                                    line = operator.line
+                                                ),
+                       operator = ORAZ,
+                       right = BinaryExpr(
+                                               left = NumberExpr(5),
+                                               operator = USTEPUJE,
+                                               right = NumberExpr(9),
+                                               line = operator.line
+                                           ),
+                       line = operator.line
+                   )
+
+*/
+
+niech kurtyna opadnie
+

@@ -1,0 +1,49 @@
+Niech kurtyna się podniesie
+
+// arytmetyka + - * /
+// dzielenie / dziala jak calkowite dzielenie
+
+// 10 + 10 = 20
+oznajmij(10 + 10);
+
+// 30 - 12 = 18
+oznajmij(30 - 12);
+
+// 6 * 7 = 42
+oznajmij(6 * 7);
+
+// 40 / 5 = 8
+oznajmij(40 / 6);
+
+// test priorytetu: najpierw * potem +
+// 10 + 2 * 3 = 16
+oznajmij(10 + 2 * 3);
+
+// test priorytetu: najpierw / potem -
+// 20 - 12 / 3 = 16
+oznajmij(20 - 12 / 3);
+
+// test nawiasów
+// (10 + 2) * 3 = 36
+oznajmij((10 + 2) * 3);
+
+// test zmiennych i arytmetyki
+Oświadczam powołanie do życia bytu o imieniu a który od pierwszego tchnienia niesie wartość 10;
+Oświadczam powołanie do życia bytu o imieniu b który od pierwszego tchnienia niesie wartość 5;
+
+// a + b = 15
+oznajmij(a + b);
+
+// a * b + 2 = 52
+oznajmij(a * b + 2);
+
+// a * (b + 2) = 70
+oznajmij(a * (b + 2));
+
+// przypisanie wyniku działania do zmiennej
+Oświadczam powołanie do życia bytu o imieniu wynik który od pierwszego tchnienia niesie wartość 100 / 4 + 5;
+
+// wynik = 30
+oznajmij(wynik);
+
+Niech kurtyna opadnie
