@@ -214,3 +214,7 @@ The test files include examples of variable declarations, assignments, arithmeti
 * Kotlin
 * JDK 17 or newer
 * Gradle
+
+Full project documentation is available here:
+
+[Open documentation](docs/documentation.pdf)
