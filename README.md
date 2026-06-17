@@ -8,11 +8,21 @@ The interpreter reads source code, converts it into tokens using a lexer, builds
 
 ## Documentation
 
-Full project documentation is available in:
+Full project documentation is available here:
 
-docs/documentation.pdf
+[Open documentation](docs/dokumentacja_jezyka_orato.pdf)
 
 The documentation is written in English.
+
+The documentation file should be placed in the `docs/` directory.
+
+## Technologies used
+
+The whole interpreter was written only in Kotlin.
+
+No external lexer, parser or interpreter generator was used. The lexer, parser, AST and interpreter were implemented manually in Kotlin.
+
+Gradle and JDK are used only to build and run the project.
 
 ## Features
 
@@ -33,20 +43,46 @@ The documentation is written in English.
 
 ## Project structure
 
+```text
 src/main/kotlin/
+```
 
-* Lexer.kt
-* Parser.kt
-* Ast.kt
-* Interpreter.kt
-* Token.kt
-* TokenType.kt
-* Main.kt
+```text
+Lexer.kt
+Parser.kt
+Ast.kt
+Interpreter.kt
+Token.kt
+TokenType.kt
+Main.kt
+```
+
+```text
+docs/
+```
+
+```text
+dokumentacja_jezyka_orato.pdf
+```
+
+```text
+testy/
+```
+
+```text
+test1.txt
+test2.txt
+test3.txt
+test4.txt
+test5.txt
+test6.txt
+```
 
 ## How it works
 
 The program is executed in the following stages:
 
+```text
 source code
 -> lexer
 -> tokens
@@ -54,6 +90,7 @@ source code
 -> AST
 -> interpreter
 -> program output
+```
 
 The lexer converts source code into tokens.
 
@@ -63,6 +100,7 @@ The interpreter executes the AST and stores variables in memory.
 
 ## Example program
 
+```orato
 Niech kurtyna się podniesie
 
 Oświadczam powołanie do życia bytu o imieniu x który od pierwszego tchnienia niesie wartość 10;
@@ -74,67 +112,90 @@ oznajmij(tekst);
 oznajmij(x);
 
 Wybaczcie śmiałość lecz rozważam czy przypadkiem (x jest 10) {
-oznajmij("x is equal to 10");
+    oznajmij("x is equal to 10");
 }
 
 Niech kurtyna opadnie
+```
 
 ## Basic syntax
 
 ### Program start
 
+```orato
 Niech kurtyna się podniesie
+```
 
 ### Program end
 
+```orato
 Niech kurtyna opadnie
+```
 
 ### Variable declaration
 
+```orato
 Oświadczam powołanie do życia bytu o imieniu x;
+```
 
 ### Variable declaration with value
 
+```orato
 Oświadczam powołanie do życia bytu o imieniu x który od pierwszego tchnienia niesie wartość 10;
+```
 
 ### Assignment
 
+```orato
 Niech byt x zostanie obdarzony wartością 20;
+```
 
 ### Output
 
+```orato
 oznajmij(x);
 
 oznajmij("text");
+```
 
 ### Input
 
+```orato
 Niech byt x przyjmie dar z ust użytkownika;
+```
 
 ### If statement
 
+```orato
 Wybaczcie śmiałość lecz rozważam czy przypadkiem (x jest 10) {
-oznajmij("true");
+    oznajmij("true");
 }
+```
 
-### Else-if
+### Else-if statement
 
+```orato
 lecz jeśli los zechce (x jest 20) {
-oznajmij("else-if");
+    oznajmij("else-if");
 }
+```
 
-### Else
+### Else statement
 
+```orato
 Jeżeli nie to zaiste uczynię co innego {
-oznajmij("else");
+    oznajmij("else");
 }
+```
 
 ### While loop
 
+```orato
 Dopóki los pozwala (x ustępuje 5) {
-oznajmij(x);
-Niech byt x zostanie obdarzony wartością x + 1;
+    oznajmij(x);
+    Niech byt x zostanie obdarzony wartością x + 1;
 }
+```
 
 ## Operators
 
@@ -145,6 +206,13 @@ Niech byt x zostanie obdarzony wartością x + 1;
 * `*` multiplication
 * `/` division
 
+Example:
+
+```orato
+Niech byt x zostanie obdarzony wartością 10 + 5;
+Niech byt y zostanie obdarzony wartością x * 2;
+```
+
 ### Comparison operators
 
 * `jest` means `==`
@@ -154,23 +222,46 @@ Niech byt x zostanie obdarzony wartością x + 1;
 * `nie_ustępuje` means `>=`
 * `nie_przewyższa` means `<=`
 
+Example:
+
+```orato
+x jest 10
+x nie_jest 20
+x przewyższa 5
+x ustępuje 100
+x nie_ustępuje 10
+x nie_przewyższa 50
+```
+
 ### Logical operators
 
 * `oraz` means `&&`
 * `albo` means `||`
 * `nie` means `!`
 
+Example:
+
+```orato
+(x jest 10) oraz (y jest 20)
+(x jest 10) albo (y jest 20)
+nie (x jest 10)
+```
+
 ## Comments
 
 ### Single-line comment
 
+```orato
 // comment
+```
 
 ### Multi-line comment
 
+```orato
 /*
 comment
 */
+```
 
 ## Running the project
 
@@ -188,22 +279,28 @@ The selected file is passed through the lexer, parser and interpreter.
 
 You can also run the project using Gradle:
 
+```bash
 ./gradlew run
+```
 
 On Windows:
 
+```bash
 gradlew.bat run
+```
 
 ## Running test files
 
 There are six test files in the project:
 
-* testy/test1.txt
-* testy/test2.txt
-* testy/test3.txt
-* testy/test4.txt
-* testy/test5.txt
-* testy/test6.txt
+```text
+testy/test1.txt
+testy/test2.txt
+testy/test3.txt
+testy/test4.txt
+testy/test5.txt
+testy/test6.txt
+```
 
 These files contain examples of all possible language constructions available in Orato.
 
@@ -214,7 +311,4 @@ The test files include examples of variable declarations, assignments, arithmeti
 * Kotlin
 * JDK 17 or newer
 * Gradle
-
-Full project documentation is available here:
-
-[Open documentation](docs/dokumentacja_jezyka_orato.pdf)
+* IntelliJ IDEA
