@@ -217,4 +217,4 @@ The test files include examples of variable declarations, assignments, arithmeti
 
 Full project documentation is available here:
 
-[Open documentation](docs/documentation.pdf)
+[Open documentation](docs/dokumentacja_jezyka_orato.pdf)
